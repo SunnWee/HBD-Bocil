@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HBD Asti Kecil🧸🎊</title>
+
+  <!-- FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      min-height:100vh;
+      background: linear-gradient(135deg, #ffd6e7, #ffc2dc, #ffe6f0);
+      font-family:'Poppins', sans-serif;
+      overflow-x:hidden;
+      padding:30px 15px;
+      color:#444;
+      position:relative;
+    }
+
+    .container{
+      max-width:450px;
+      margin:auto;
+      background:rgba(255,255,255,0.45);
+      backdrop-filter:blur(10px);
+      border-radius:30px;
+      padding:30px 22px;
+      text-align:center;
+      box-shadow:0 10px 30px rgba(255,105,180,0.25);
+      border:2px solid rgba(255,255,255,0.6);
+      position:relative;
+      z-index:2;
+    }
+
+    .title{
+      font-family:'Pacifico', cursive;
+      color:#ff4f8b;
+      font-size:2.2rem;
+      line-height:1.4;
+      margin-bottom:25px;
+    }
+
+    .title span{
+      display:block;
+      font-size:1.8rem;
+      color:#ff70a6;
+    }
+
+    /* =========================
+       POLAROID
+    ========================= */
+
+    .polaroid{
+      background:white;
+      padding:15px 15px 55px;
+      border-radius:10px;
+      width:260px;
+      margin:0 auto 30px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.15);
+      transform:rotate(-2deg);
+      transition:0.3s;
+    }
+
+    .polaroid:hover{
+      transform:rotate(0deg) scale(1.03);
+    }
+
+    .photo{
+      width:100%;
+      height:280px;
+      overflow:hidden;
+      border-radius:5px;
+      background:#ffd3e3;
+    }
+
+    .photo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .polaroid-text{
+      margin-top:15px;
+      font-family:'Pacifico', cursive;
+      color:#ff5c93;
+      font-size:1.2rem;
+    }
+
+    /* =========================
+       UCAPAN
+    ========================= */
+
+    .message-box{
+      background:white;
+      padding:22px;
+      border-radius:20px;
+      border:2px dashed #ff9fc0;
+      margin-bottom:30px;
+      box-shadow:0 5px 15px rgba(255,105,180,0.15);
+    }
+
+    .message-title{
+      color:#ff4f8b;
+      font-weight:600;
+      margin-bottom:10px;
+      font-size:1.1rem;
+    }
+
+    .message{
+      line-height:1.8;
+      font-size:0.95rem;
+    }
+
+    /* =========================
+       KALENDER
+    ========================= */
+
+    .calendar-wrapper{
+      display:flex;
+      justify-content:center;
+      margin-bottom:30px;
+    }
+
+    .calendar{
+      width:180px;
+      background:white;
+      border-radius:25px;
+      overflow:hidden;
+      position:relative;
+      box-shadow:0 10px 20px rgba(255,105,180,0.2);
+      animation:bounce 2.5s infinite;
+      border:3px solid #ffd1e3;
+    }
+
+    .calendar-top{
+      background:linear-gradient(90deg,#ff7eb3,#ff9fc0);
+      color:white;
+      padding:12px;
+      font-weight:600;
+      font-size:1.1rem;
+      letter-spacing:1px;
+    }
+
+    .calendar-date{
+      font-size:4rem;
+      font-weight:700;
+      color:#ff4f8b;
+      padding-top:15px;
+      line-height:1;
+    }
+
+    .calendar-text{
+      padding:10px 0 20px;
+      color:#888;
+      font-size:1rem;
+      font-weight:500;
+    }
+
+    .sparkle{
+      position:absolute;
+      animation:floatSparkle 3s infinite ease-in-out;
+    }
+
+    .sparkle1{
+      top:10px;
+      right:10px;
+      font-size:20px;
+    }
+
+
+    .sparkle3{
+      top:50%;
+      left:-5px;
+      font-size:20px;
+      animation-delay:2s;
+    }
+
+    @keyframes bounce{
+      0%{
+        transform:translateY(0px);
+      }
+
+      50%{
+        transform:translateY(-8px);
+      }
+
+      100%{
+        transform:translateY(0px);
+      }
+    }
+
+    @keyframes floatSparkle{
+      0%{
+        transform:translateY(0px) rotate(0deg);
+      }
+
+      50%{
+        transform:translateY(-8px) rotate(10deg);
+      }
+
+      100%{
+        transform:translateY(0px) rotate(0deg);
+      }
+    }
+
+    /* =========================
+       MENU
+    ========================= */
+
+    .menu-title{
+      font-family:'Pacifico', cursive;
+      color:#ff4f8b;
+      font-size:1.5rem;
+      margin-bottom:15px;
+    }
+
+    .menu-container{
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+    }
+
+    .menu-card{
+      background:white;
+      border-radius:20px;
+      padding:20px;
+      cursor:pointer;
+      transition:0.3s;
+      box-shadow:0 6px 15px rgba(255,105,180,0.18);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .menu-card:hover{
+      transform:translateY(-5px) scale(1.02);
+    }
+
+    /* AMPLOP */
+
+    .envelope{
+      width:70px;
+      height:50px;
+      background:#ff9fc0;
+      margin:0 auto 15px;
+      position:relative;
+      border-radius:5px;
+    }
+
+    .envelope::before{
+      content:'';
+      position:absolute;
+      top:0;
+      left:0;
+      width:0;
+      height:0;
+      border-left:35px solid transparent;
+      border-right:35px solid transparent;
+      border-top:25px solid #ff6fa3;
+      transform-origin:top;
+      animation:openEnvelope 2s infinite alternate;
+    }
+
+    @keyframes openEnvelope{
+      0%{
+        transform:rotateX(0deg);
+      }
+
+      100%{
+        transform:rotateX(180deg);
+      }
+    }
+
+    .menu-text{
+      color:#ff4f8b;
+      font-weight:600;
+      font-size:1rem;
+    }
+
+    /* =========================
+       POPUP
+    ========================= */
+
+    .popup{
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      background:rgba(255,192,203,0.45);
+      backdrop-filter:blur(8px);
+      display:none;
+      justify-content:center;
+      align-items:center;
+      padding:20px;
+      z-index:999;
+      animation:fadeIn 0.4s;
+    }
+
+    @keyframes fadeIn{
+      from{
+        opacity:0;
+      }
+
+      to{
+        opacity:1;
+      }
+    }
+
+    .popup-content{
+      background:white;
+      width:100%;
+      max-width:500px;
+      max-height:90vh;
+      overflow-y:auto;
+      border-radius:25px;
+      padding:25px;
+      animation:popUp 0.4s ease;
+      box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    @keyframes popUp{
+      from{
+        transform:scale(0.8);
+        opacity:0;
+      }
+
+      to{
+        transform:scale(1);
+        opacity:1;
+      }
+    }
+
+    /* =========================
+       SURAT
+    ========================= */
+
+    .letter-paper{
+      background:#fffaf0;
+      border:2px dashed #d8b48c;
+      padding:25px;
+      border-radius:15px;
+      text-align:left;
+      line-height:1.9;
+    }
+
+    .letter-paper h2{
+      text-align:center;
+      color:#ff4f8b;
+      margin-bottom:20px;
+      font-family:'Pacifico', cursive;
+    }
+
+    /* =========================
+       MEMORIES
+    ========================= */
+
+    .memory-grid{
+      display:grid;
+      gap:20px;
+    }
+
+    .memory-item{
+      background:#fff0f5;
+      padding:15px;
+      border-radius:18px;
+    }
+
+    .memory-polaroid{
+      background:white;
+      padding:10px 10px 35px;
+      border-radius:10px;
+      box-shadow:0 5px 12px rgba(0,0,0,0.15);
+    }
+
+    .memory-polaroid img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+      border-radius:5px;
+    }
+
+    .memory-caption{
+      margin-top:12px;
+      color:#ff4f8b;
+      font-size:0.95rem;
+      line-height:1.6;
+    }
+
+    /* =========================
+       BOOK
+    ========================= */
+
+    .book{
+      background:#fffaf0;
+      border-radius:15px;
+      padding:30px;
+      text-align:left;
+      line-height:2;
+      border-left:10px solid #ff9fc0;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .book h2{
+      text-align:center;
+      color:#ff4f8b;
+      margin-bottom:20px;
+      font-family:'Pacifico', cursive;
+    }
+
+    /* =========================
+       BUTTON
+    ========================= */
+
+    .back-btn{
+      margin-top:25px;
+      padding:12px 20px;
+      border:none;
+      background:#ff6fa3;
+      color:white;
+      border-radius:30px;
+      cursor:pointer;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    .back-btn:hover{
+      background:#ff4f8b;
+    }
+
+    /* =========================
+       MUSIC PLAYER
+    ========================= */
+
+    .music-player{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      display:flex;
+      align-items:center;
+      gap:12px;
+      z-index:9999;
+    }
+
+    .music-info{
+      background:rgba(255,255,255,0.9);
+      backdrop-filter:blur(10px);
+      padding:10px 16px;
+      border-radius:20px;
+      box-shadow:0 5px 15px rgba(255,105,180,0.2);
+
+      opacity:0;
+      transform:translateX(20px);
+
+      transition:0.4s;
+      pointer-events:none;
+    }
+
+    .music-info.show{
+      opacity:1;
+      transform:translateX(0);
+    }
+
+    .music-title{
+      color:#ff4f8b;
+      font-weight:600;
+      font-size:0.95rem;
+    }
+
+    .music-artist{
+      color:#888;
+      font-size:0.8rem;
+      margin-top:2px;
+    }
+
+    .music-btn{
+      width:60px;
+      height:60px;
+      border:none;
+      border-radius:50%;
+      background:linear-gradient(135deg,#ff7eb3,#ff4f8b);
+      color:white;
+      font-size:1.4rem;
+      cursor:pointer;
+      box-shadow:0 5px 18px rgba(255,105,180,0.4);
+
+      transition:0.3s;
+      animation:musicBounce 2s infinite;
+    }
+
+    .music-btn:hover{
+      transform:scale(1.08);
+    }
+
+    @keyframes musicBounce{
+      0%{
+        transform:translateY(0);
+      }
+
+      50%{
+        transform:translateY(-5px);
+      }
+
+      100%{
+        transform:translateY(0);
+      }
+    }
+
+    /* =========================
+       LYRICS
+    ========================= */
+
+.lyrics{
+  position:fixed;
+
+  top:40px;
+  left:50%;
+
+  transform:translateX(-50%);
+
+  font-size:1.5rem;
+  font-family:'Pacifico', cursive;
+
+  color:white;
+
+  text-align:center;
+
+  width:90%;
+  max-width:700px;
+
+  pointer-events:none;
+
+  opacity:0;
+
+  transition:1s;
+
+  z-index:99999;
+
+  text-shadow:
+    0 0 10px rgba(255,105,180,0.8),
+    0 0 20px rgba(255,105,180,0.6),
+    0 0 30px rgba(255,255,255,0.5);
+
+  background:rgba(255,255,255,0.12);
+
+  backdrop-filter:blur(8px);
+
+  padding:12px 25px;
+
+  border-radius:30px;
+
+  border:1px solid rgba(255,255,255,0.3);
+}
+
+.lyrics.show{
+  opacity:1;
+  animation:lyricsFloat 4s infinite ease-in-out;
+}
+
+@keyframes lyricsFloat{
+
+  0%{
+    transform:translateX(-50%) translateY(0px);
+  }
+
+  50%{
+    transform:translateX(-50%) translateY(-5px);
+  }
+
+  100%{
+    transform:translateX(-50%) translateY(0px);
+  }
+}
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    .footer-text{
+      text-align:center;
+      margin-top:40px;
+      color:#ff4f8b;
+      font-family:'Pacifico', cursive;
+      font-size:1.3rem;
+      line-height:1.8;
+      padding-bottom:30px;
+    }
+
+    /* FIX POPUP */
+.popup{
+  z-index:999999 !important;
+}
+
+/* FIX CONTAINER */
+.container{
+  position:relative;
+  z-index:2;
+}
+
+/* FIX MUSIC */
+.music-player{
+  z-index:9999999 !important;
+}
+
+/* FIX LYRICS */
+.lyrics{
+  z-index:99999 !important;
+}
+
+
+  </style>
+</head>
+
+<body>
+
+  <!-- LYRICS -->
+  <div class="lyrics" id="lyrics">
+    
+  </div>
+
+  <div class="container">
+
+    <!-- TITLE -->
+    <div class="title">
+      🎀Happy Birthday🎀
+      <span>Asti Kecil</span>
+    </div>
+
+    <!-- FOTO -->
+    <div class="polaroid">
+
+      <div class="photo">
+
+        <!-- GANTI DENGAN FOTO KAMU -->
+        <img src="foto utama.jpeg" alt="Foto">
+
+      </div>
+
+      <div class="polaroid-text">
+        Sweet Girl ✨
+      </div>
+
+    </div>
+
+    <!-- UCAPAN -->
+    <div class="message-box">
+
+      <div class="message-title">
+        💌 For Asti Kecil
+      </div>
+
+      <div class="message">
+
+        Selamat ulang tahun yang ke-19 yaa 🎂💕<br><br>
+
+        Semoga semua hal baik selalu datang ke hidup kamu,
+        panjang umur, sehat selalu, makin bahagia, rasa capenya
+        dikurangin, dan semua impiannya bisa tercapai, aamiinn ✨
+
+      </div>
+
+    </div>
+
+    <!-- KALENDER -->
+    <div class="calendar-wrapper">
+
+      <div class="calendar">
+
+        <div class="calendar-top">
+          June 🎀
+        </div>
+
+        <div class="calendar-date">
+          13
+        </div>
+
+        <div class="calendar-text">
+          Special Day ✨
+        </div>
+
+        <div class="sparkle sparkle1">💖</div>
+        <div class="sparkle sparkle3">✨</div>
+
+      </div>
+
+    </div>
+
+    <!-- MENU -->
+    <div class="menu-title">
+      Special Menu 🎀
+    </div>
+
+    <div class="menu-container">
+
+      <!-- SURAT -->
+      <div class="menu-card" onclick="openPopup('suratPopup')">
+
+        <div class="envelope"></div>
+
+        <div class="menu-text">
+          💌 SURAT MINI
+        </div>
+
+      </div>
+
+      <!-- MEMORIES -->
+      <div class="menu-card" onclick="openPopup('memoryPopup')">
+
+        <div class="envelope"></div>
+
+        <div class="menu-text">
+          📸 SPECIAL MEMORIES
+        </div>
+
+      </div>
+
+      <!-- STORY -->
+      <div class="menu-card" onclick="openPopup('storyPopup')">
+
+        <div class="envelope"></div>
+
+        <div class="menu-text">
+          📖 LITTLE STORY
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer-text">
+      Hope you like it,<br>
+      Happy Level Up Sweetie! 🎀💖
+    </div>
+
+  </div>
+
+  <!-- =========================
+       POPUP SURAT
+  ========================= -->
+
+  <div class="popup" id="suratPopup">
+
+    <div class="popup-content">
+
+      <div class="letter-paper">
+
+        <h2>💌 Surat Untuk Kamu</h2>
+
+        Hai Asti kecil 🎀<br><br>
+
+        Terima kasih sudah hadir dan menjadi seseorang yang spesial.
+        Semoga di umur yang ke-19 ini kamu selalu dikelilingi
+        kebahagiaan, cinta, dan hal-hal indah lainnya ✨<br><br>
+
+        Jangan lupa selalu senyum yaa,
+        karena senyum kamu itu kaya gula kapas, manis banget 💖,
+
+      </div>
+
+      <button class="back-btn" onclick="closePopup('suratPopup')">
+        ← Kembali
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- =========================
+       POPUP MEMORIES
+  ========================= -->
+
+  <div class="popup" id="memoryPopup">
+
+    <div class="popup-content">
+
+      <h2 style="color:#ff4f8b; margin-bottom:20px;">
+        📸 Special Memories
+      </h2>
+
+      <div class="memory-grid">
+
+        <div class="memory-item">
+
+          <div class="memory-polaroid">
+            <img src="memories1.jpg" alt="">
+          </div>
+
+          <div class="memory-caption">
+            Fotomu yang paling beauty anggunly ✨
+          </div>
+
+        </div>
+
+        <div class="memory-item">
+
+          <div class="memory-polaroid">
+            <img src="memories2.png" alt="">
+          </div>
+
+          <div class="memory-caption">
+            Asti waktu masih bocil 💖
+          </div>
+
+        </div>
+
+        <div class="memory-item">
+
+          <div class="memory-polaroid">
+            <img src="memories3.jpg" alt="">
+          </div>
+
+          <div class="memory-caption">
+            Tawa bocil yang selalu bikin bahagia 🎀
+          </div>
+
+        </div>
+
+        <div class="memory-item">
+
+          <div class="memory-polaroid">
+            <img src="memories4.png" alt="">
+          </div>
+
+          <div class="memory-caption">
+            Momen lucu yang selalu diingat ✨
+          </div>
+
+        </div>
+
+        <div class="memory-item">
+
+          <div class="memory-polaroid">
+            <img src="memories5.png" alt="">
+          </div>
+
+          <div class="memory-caption">
+            Semoga kenangan ini selalu abadi 💕
+          </div>
+
+        </div>
+
+      </div>
+
+      <button class="back-btn" onclick="closePopup('memoryPopup')">
+        ← Kembali
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- =========================
+       POPUP STORY
+  ========================= -->
+
+  <div class="popup" id="storyPopup">
+
+    <div class="popup-content">
+
+      <div class="book">
+
+        <h2>📖 Little Story</h2>
+
+        Hehehee, aku nyiapin ini udah dari 1 bulan yang lalu.
+        Aku tanya foto itu buat ini, yang aku maksud kerja juga ini hihihi.
+        Tiba tiba aja dapet inspirasi mau buat kaya gini.
+        Semoga suka yaaa😸😸<br><br>
+
+        Sedikit pesan dari akuu, hidup ituu membuat kita semakin dewasa.
+        Pasti makin banyak tanggung jawab yang harus kita penuhi.
+        Apapun yang terjadi, kita jalani, kita hadapi dan kita lewati.
+        Capek boleh, nyerah jangan. Aku yakin kamu bisa ngelewatin semuanya. 
+        Tetep semangattt bocill💗🧸🎀
+
+      </div>
+
+      <button class="back-btn" onclick="closePopup('storyPopup')">
+        ← Kembali
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- =========================
+       MUSIC PLAYER
+  ========================= -->
+
+  <div class="music-player">
+
+    <div class="music-info" id="musicInfo">
+
+      <div class="music-title">
+        🎵 Risk It All
+      </div>
+
+      <div class="music-artist">
+        Bruno Mars
+      </div>
+
+    </div>
+
+    <button class="music-btn" onclick="toggleMusic()">
+      🎵
+    </button>
+
+  </div>
+
+  <!-- AUDIO -->
+  <!-- GANTI lagu.mp3 -->
+  <audio id="bgMusic" src="Risk It All - Bruno Mars.mp3"></audio>
+
+  <!-- =========================
+       SCRIPT
+  ========================= -->
+
+  <script>
+
+    /* POPUP */
+
+    function openPopup(id){
+      document.getElementById(id).style.display = "flex";
+    }
+
+    function closePopup(id){
+      document.getElementById(id).style.display = "none";
+    }
+
+    /* MUSIC */
+
+    const music = document.getElementById("bgMusic");
+    const musicInfo = document.getElementById("musicInfo");
+    const lyrics = document.getElementById("lyrics");
+
+    let playing = false;
+
+    function toggleMusic(){
+
+      if(!playing){
+
+        music.play();
+
+        musicInfo.classList.add("show");
+        lyrics.classList.add("show");
+
+        playing = true;
+
+      } else {
+
+        music.pause();
+
+        musicInfo.classList.remove("show");
+        lyrics.classList.remove("show");
+
+        playing = false;
+      }
+    }
+
+    /* LIRIK */
+
+    const lyricList = [
+
+      "🎺🎺🎺",
+      "🎺🎺🎺",
+      "🎺🎺🎺",
+      "🎺🎺🎺",
+      "🎺🎺🎺",
+      "🎺🎺🎺",
+      "",
+      "For just a chance,",
+      "To win your heart 💖",
+      "You could set the bar🍽️🍷", 
+      "Beyond the stars ✨",
+      "I'll do anything",
+      "Anything you ask me to.. 🌸",
+      "Say you want the moon🌙", 
+      "Watch me learn to fly🪽",
+      "Ain't no mountain you could point to📍",
+      "I wouldn't climb⛰️",
+      "It's crazy, but it's true💯",
+      "There's nothing i won't do💁‍♂️",
+      "I'd risk it all for you🫵🫶",
+      "To hold your hand🤝",
+      "And call you mine🤗",
+      "I'm tryna be your man🤵",
+      "'til the end of time⌛",
+      "Oh, i'll do anything",
+      "Anything you ask me to.. 💕",
+
+      "I would run through a fire🔥🏃‍♂️",
+      "Just to be by your side🧑🏻‍🤝‍🧑🏻",
+      "If your heart's on the line🔗",
+      "You could take mine🫀",
+      "It's crazy, but it's true💯",
+      "There's nothing i won't do💁‍♂️",
+      "I'd risk it all for you🫵🫶",
+
+      "🎻",
+
+      "I would swim across the sea just to show you🌊",
+      "Sacrifice my life just to hold you🫴👸🏻",
+      "I could go on and on💨💨",
+      "To prove that you belong here in my arms🫂",
+
+      " ",
+
+      "🎸🎺",
+      "🎸🎺",
+      "🎸🎺",
+      "🎸🎺",
+      "🎸🎺",
+      "🎸🎺",
+      "🎸🎺",
+
+      "Say you want the moon🌙", 
+      "Watch me learn to fly🪽",
+      "Ain't no mountain you could point to📍",
+      "I wouldn't climb⛰️",
+      "It's crazy, but it's true💯",
+      "There's nothing i won't do💁‍♂️",
+      "I'd risk it all for you🫵🫶",
+
+      "It's crazy, but it's true💯",
+      "There's nothing i won't do💁‍♂️",
+      "I'd risk it all for you🫵🫶",
+
+      "🎸🎺",
+      "🎸🎺",
+
+    ];
+
+    let lyricIndex = 0;
+
+    setInterval(() => {
+
+      if(playing){
+
+        lyricIndex++;
+
+        if(lyricIndex >= lyricList.length){
+          lyricIndex = 0;
+        }
+
+        lyrics.innerHTML = lyricList[lyricIndex];
+      }
+
+    }, 3400);
+
+  </script>
+
+</body>
+</html>
